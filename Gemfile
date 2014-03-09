@@ -1,8 +1,9 @@
-source :rubygems
+source 'https://rubygems.org'
 
 # Server requirements
 # gem 'thin' # or mongrel
 # gem 'trinidad', :platform => 'jruby'
+gem 'puma'
 
 # Project requirements
 gem 'rake'
@@ -12,13 +13,14 @@ gem 'sprockets'
 # Component requirements
 gem 'sass'
 gem 'slim'
-gem 'activerecord', :require => "active_record"
-gem 'sqlite3'
+
+# gem 'jrjade', path: '~/dev/jrjade'
+gem 'jrjade',   github: 'guyboertje/jrjade'
 
 # Test requirements
 
 # Padrino Stable Gem
-gem 'padrino', '0.10.6'
+gem 'padrino', '0.12.0'
 
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'

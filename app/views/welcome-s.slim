@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    link href='assets/application.css' media='screen' rel='stylesheet' type='text/css'
+    title Title tag
+    == yield_content :style
+  body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          a.brand href='/'
+            | App Title
+          ul.nav
+            li
+              a href='/' Home
+            li
+              a href='/' Wherever
+    
+    .container
+
+      p Welcome to Slim!
+      p Try this out
+      = partial 'includes/link', engine: :slim, locals: { name: 'Jade', link_url: '/jade' }
+      
+      p= Time.now.strftime("%F %R")
+      
+      = partial 'includes/footer', engine: :slim
+    
+    script type="text/javascript" src="assets/application.js"
+    == yield_content :javascript
+

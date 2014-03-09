@@ -1,21 +1,23 @@
 class Abstraktor < Padrino::Application
   register SassInitializer
-  use ActiveRecord::ConnectionAdapters::ConnectionManagement
   register Padrino::Rendering
   register Padrino::Mailer
   register Padrino::Helpers
 
   enable :sessions
 
-    set :root, File.dirname(__FILE__)  
+  set :root, File.dirname(__FILE__)  
+
+  use ::SprocketsSinatraMiddleware, :root => settings.root, :path => 'assets'
   
-    use ::SprocketsSinatraMiddleware, :root => settings.root, :path => 'assets'
-    
-    
-  get "/" do
-    slim "p Welcome!"
+  get "/slim" do
+    render "welcome-s", :layout => false
   end
-  
+
+  get "/jade" do
+    render "welcome-j", :layout => false
+  end
+
   ##
   # Caching support
   #

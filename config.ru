@@ -7,6 +7,7 @@
 require File.expand_path("../config/boot.rb", __FILE__)
 
 # stuff in lib
-require './lib/sprockets_sinatra_middleware'
+# require '../lib/sprockets_sinatra_middleware'
+require File.expand_path("../lib/sprockets_sinatra_middleware", __FILE__)
 
 run Padrino.application
