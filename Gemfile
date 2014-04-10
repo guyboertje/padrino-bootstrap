@@ -14,13 +14,13 @@ gem 'sprockets'
 gem 'sass'
 gem 'slim'
 
-# gem 'jrjade', path: '~/dev/jrjade'
-gem 'jrjade',   github: 'guyboertje/jrjade'
+gem 'jrjade', path: '~/dev/jrjade'
+# gem 'jrjade',   github: 'guyboertje/jrjade'
 
 # Test requirements
 
 # Padrino Stable Gem
-gem 'padrino', '0.12.0'
+gem 'padrino', '0.12.1'
 
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
